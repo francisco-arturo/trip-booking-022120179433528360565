@@ -1,0 +1,6 @@
+node_modules/
+.vercel/
+.harness/
+dev-server.mjs
+verify.mjs
+*.md

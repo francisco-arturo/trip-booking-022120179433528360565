@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f4ec">
+  <title>Meridian: international stays and flights, booked in one place</title>
+  <meta name="description" content="Search sample stays and flights, book with a secure demo checkout, and get quick answers from the Meridian travel assistant.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,420;9..144,520;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Meridian home">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true" fill="none">
+          <circle cx="13" cy="13" r="11.5" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M13 4.5v3M13 18.5v3M4.5 13h3M18.5 13h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="m16.8 9.2-2.1 5.5-5.5 2.1 2.1-5.5 5.5-2.1Z" fill="currentColor"/>
+        </svg>
+        <span>meridian</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="#destinations">Destinations</a>
+        <a href="#search" data-mode-link="stays">Stays</a>
+        <a href="#search" data-mode-link="flights">Flights</a>
+        <button type="button" class="nav-button" data-open-trips>My trips</button>
+      </nav>
+
+      <div class="header-actions">
+        <span class="currency" aria-label="Prices in US dollars">USD</span>
+        <button type="button" class="assistant-launch" data-open-chat aria-label="Ask Meridian">
+          <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+            <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.3 9.3 0 0 1-3.2-.7L4 21l1.8-4.3A8.1 8.1 0 0 1 3 11.5a8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 9 8.4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M8 11.5h.01M12 11.5h.01M16 11.5h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <span>Ask Meridian</span>
+        </button>
+        <span class="avatar" title="Signed in as Alex Morgan">AM</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Go further.<br>Book it in one place.</h1>
+          <p class="hero-lede">Stays, flights and a booking desk that answers in seconds.</p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="#search">Find a trip
+              <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+                <path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a class="text-link" href="#destinations">Browse destinations</a>
+          </div>
+          <ul class="hero-proof" aria-label="Booking benefits">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12.5 4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Instant confirmation
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12.5 4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Secure checkout
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12.5 4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Human support
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-photo-wrap">
+            <img class="hero-photo" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1400&q=85" alt="Cliffside villages above the sea on the Amalfi Coast" width="1400" height="1100">
+            <span class="photo-caption">Amalfi Coast, Italy</span>
+          </div>
+
+          <div class="fare-card" aria-label="Sample fare from New York to Lisbon">
+            <div class="fare-top">
+              <span class="fare-route">New York <span aria-hidden="true">→</span> Lisbon</span>
+              <span class="fare-badge">Sample fare</span>
+            </div>
+            <div class="fare-bottom">
+              <div>
+                <span class="fare-label">New York to Lisbon</span>
+                <strong class="fare-price">$612</strong>
+              </div>
+              <span class="fare-meta">Nonstop<br>6h 50m</span>
+            </div>
+            <div class="fare-perf" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section" id="search" aria-labelledby="search-title">
+      <div class="shell">
+        <div class="search-dock">
+          <div class="search-dock-head">
+            <h2 id="search-title">Where are you going?</h2>
+            <p>Sample inventory. No real booking is created.</p>
+          </div>
+
+          <div class="mode-tabs" role="tablist" aria-label="Search type">
+            <button type="button" class="mode-tab is-active" role="tab" aria-selected="true" data-mode="stays" id="tab-stays">
+              Stays
+            </button>
+            <button type="button" class="mode-tab" role="tab" aria-selected="false" data-mode="flights" id="tab-flights">
+              Flights
+            </button>
+          </div>
+
+          <form class="search-form" id="search-form" novalidate>
+            <label class="field field--wide">
+              <span class="field-label">Destination</span>
+              <span class="select-wrap">
+                <select id="destination" name="destination">
+                  <option value="lisbon">Lisbon, Portugal</option>
+                  <option value="kyoto">Kyoto, Japan</option>
+                  <option value="amalfi">Amalfi Coast, Italy</option>
+                  <option value="marrakech">Marrakech, Morocco</option>
+                  <option value="reykjavik">Reykjavik, Iceland</option>
+                  <option value="cape-town">Cape Town, South Africa</option>
+                  <option value="any">Anywhere</option>
+                </select>
+                <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </label>
+
+            <label class="field">
+              <span class="field-label" id="date-start-label">Check in</span>
+              <input type="date" id="check-in" name="check-in" required>
+            </label>
+
+            <label class="field">
+              <span class="field-label" id="date-end-label">Check out</span>
+              <input type="date" id="check-out" name="check-out" required>
+            </label>
+
+            <label class="field">
+              <span class="field-label">Travelers</span>
+              <span class="select-wrap">
+                <select id="travelers" name="travelers">
+                  <option value="1">1 adult</option>
+                  <option value="2" selected>2 adults</option>
+                  <option value="3">2 adults, 1 child</option>
+                  <option value="4">4 adults</option>
+                </select>
+                <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m7 10 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </label>
+
+            <button class="button button--primary search-submit" type="submit" id="search-submit">
+              <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="10.8" cy="10.8" r="6.6" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Search stays
+            </button>
+          </form>
+          <p class="form-hint" id="search-error" role="alert" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="results" id="results" aria-labelledby="results-title" hidden>
+      <div class="shell">
+        <div class="section-heading results-heading">
+          <div>
+            <h2 id="results-title">Stays in Lisbon</h2>
+            <p class="results-date" id="results-kicker">Sample dates</p>
+          </div>
+          <p class="results-count" id="results-count"></p>
+        </div>
+        <div class="results-grid" id="results-grid"></div>
+        <p class="results-note">Sample availability and prices for this prototype. Nothing is reserved until you pay.</p>
+      </div>
+    </section>
+
+    <section class="destinations" id="destinations" aria-labelledby="destinations-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <h2 id="destinations-title">Six places to start</h2>
+          </div>
+          <p class="section-note">Pick a place and the search fills in for you.</p>
+        </div>
+        <div class="destination-grid" id="destination-grid"></div>
+      </div>
+    </section>
+
+    <section class="promise" aria-labelledby="promise-title">
+      <div class="shell promise-grid">
+        <div class="promise-copy">
+          <h2 id="promise-title">Built for the booking, not just the browse.</h2>
+          <p>One search covers the stay and the flight. One checkout takes the card. One assistant answers before the tab gets closed.</p>
+          <ul class="promise-list">
+            <li>
+              <strong>One checkout</strong>
+              <span>Stay, flight and traveler details in a single reviewed total.</span>
+            </li>
+            <li>
+              <strong>Payments with a real path</strong>
+              <span>Hosted card fields, 3-D Secure and a webhook confirmation are the production slots.</span>
+            </li>
+            <li>
+              <strong>Answers in seconds</strong>
+              <span>Fast replies on fares, baggage and cancellations, with human handoff.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="integration-panel">
+          <div class="integration-head">
+            <h3>Integration slots</h3>
+            <span>Prototype placeholders</span>
+          </div>
+          <ul class="integration-list">
+            <li>
+              <span class="integration-mark">S</span>
+              <div><strong>Stripe Payments</strong><small>Cards, wallets, 3-D Secure</small></div>
+              <span class="slot-state">Ready to connect</span>
+            </li>
+            <li>
+              <span class="integration-mark">D</span>
+              <div><strong>Duffel or Amadeus</strong><small>Flight search and ticketing</small></div>
+              <span class="slot-state">Ready to connect</span>
+            </li>
+            <li>
+              <span class="integration-mark">B</span>
+              <div><strong>Booking.com or Hotelbeds</strong><small>Stay inventory and rates</small></div>
+              <span class="slot-state">Ready to connect</span>
+            </li>
+            <li>
+              <span class="integration-mark">T</span>
+              <div><strong>Twilio or WhatsApp</strong><small>Assistant and human handoff</small></div>
+              <span class="slot-state">Ready to connect</span>
+            </li>
+          </ul>
+          <p class="integration-note">Names show the intended production stack. None of these connections are live in this prototype.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="#top">
+          <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true" fill="none">
+            <circle cx="13" cy="13" r="11.5" stroke="currentColor" stroke-width="1.4"/>
+            <path d="m16.8 9.2-2.1 5.5-5.5 2.1 2.1-5.5 5.5-2.1Z" fill="currentColor"/>
+          </svg>
+          <span>meridian</span>
+        </a>
+        <p>International stays and flights, booked in one place.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#destinations">Destinations</a>
+        <a href="#search" data-mode-link="stays">Stays</a>
+        <a href="#search" data-mode-link="flights">Flights</a>
+        <button type="button" class="footer-button" data-open-chat>Travel assistant</button>
+      </nav>
+      <p class="footer-legal">Prototype with seeded sample data. Photography from Unsplash. No payment is processed.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="chat-fab" id="chat-fab" data-open-chat aria-expanded="false" aria-controls="chat-panel">
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+      <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.3 9.3 0 0 1-3.2-.7L4 21l1.8-4.3A8.1 8.1 0 0 1 3 11.5a8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 9 8.4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+      <path d="M8 11.5h.01M12 11.5h.01M16 11.5h.01" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+    <span>Need a hand?</span>
+  </button>
+
+  <aside class="chat-panel" id="chat-panel" aria-label="Meridian travel assistant" hidden>
+    <header class="chat-header">
+      <div class="chat-identity">
+        <span class="chat-avatar" aria-hidden="true">M</span>
+        <div>
+          <strong>Meridian assistant</strong>
+          <span>Fast replies, 24/7</span>
+        </div>
+      </div>
+      <button type="button" class="icon-button" id="chat-close" aria-label="Close assistant">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </header>
+
+    <div class="chat-log" id="chat-log" role="log" aria-live="polite" aria-relevant="additions">
+      <div class="message message--bot">
+        <p>Hi Alex. I can help with a destination, a stay, a flight or a payment question. What are you planning?</p>
+      </div>
+      <div class="chat-chips" id="chat-chips">
+        <button type="button" class="chat-chip" data-prompt="Find a beach escape">Beach escape</button>
+        <button type="button" class="chat-chip" data-prompt="Kyoto in spring">Kyoto in spring</button>
+        <button type="button" class="chat-chip" data-prompt="What is included in baggage?">Baggage</button>
+        <button type="button" class="chat-chip" data-prompt="How does payment work?">Payments</button>
+        <button type="button" class="chat-chip" data-prompt="Talk to a human">Talk to a human</button>
+      </div>
+    </div>
+
+    <form class="chat-form" id="chat-form">
+      <label class="sr-only" for="chat-input">Message the assistant</label>
+      <input type="text" id="chat-input" name="message" placeholder="Ask about a trip..." autocomplete="off" maxlength="280">
+      <button type="submit" class="chat-send" aria-label="Send message">
+        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m4 12 16-8-6 8 6 8-16-8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+    <p class="chat-disclaimer">Demo assistant with canned replies. No live agent is connected.</p>
+  </aside>
+
+  <div class="modal" id="booking-modal" hidden>
+    <div class="modal-scrim" data-close-booking></div>
+    <section class="booking-sheet" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+      <button type="button" class="icon-button sheet-close" data-close-booking aria-label="Close booking">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+
+      <div class="booking-layout">
+        <aside class="booking-summary" id="booking-summary">
+          <p class="summary-kind" id="summary-kind">Stay in Lisbon</p>
+          <h2 id="booking-title">Casa do Mar</h2>
+          <img class="summary-photo" id="summary-photo" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=720&q=80" alt="" width="720" height="480">
+          <p class="summary-area" id="summary-area"></p>
+          <dl class="summary-facts" id="summary-facts"></dl>
+          <div class="summary-total">
+            <span>Total</span>
+            <strong id="summary-total">$0</strong>
+          </div>
+          <p class="summary-policy" id="summary-policy"></p>
+        </aside>
+
+        <div class="booking-main">
+          <div class="booking-steps" aria-label="Checkout progress">
+            <span class="is-current">1. Details</span>
+            <span>2. Payment</span>
+            <span>3. Confirmed</span>
+          </div>
+          <h3>Review and pay</h3>
+          <p class="booking-lede">This is a demo checkout. Use the filled demo card or enter any valid test number.</p>
+
+          <form id="booking-form" novalidate>
+            <fieldset>
+              <legend>Lead traveler</legend>
+              <div class="field-row">
+                <label class="field">
+                  <span class="field-label">First name</span>
+                  <input type="text" id="traveler-first" name="firstName" value="Alex" autocomplete="given-name" required>
+                  <span class="field-error" id="error-firstName" hidden></span>
+                </label>
+                <label class="field">
+                  <span class="field-label">Last name</span>
+                  <input type="text" id="traveler-last" name="lastName" value="Morgan" autocomplete="family-name" required>
+                  <span class="field-error" id="error-lastName" hidden></span>
+                </label>
+              </div>
+              <label class="field">
+                <span class="field-label">Email for the confirmation</span>
+                <input type="email" id="traveler-email" name="email" value="alex.morgan@example.com" autocomplete="email" required>
+                <span class="field-error" id="error-email" hidden></span>
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend>Payment details</legend>
+              <label class="field">
+                <span class="field-label">Name on card</span>
+                <input type="text" id="card-name" name="cardName" value="ALEX MORGAN" autocomplete="cc-name" required>
+                <span class="field-error" id="error-name" hidden></span>
+              </label>
+              <label class="field">
+                <span class="field-label">Card number</span>
+                <input type="text" id="card-number" name="cardNumber" value="4242 4242 4242 4242" inputmode="numeric" autocomplete="cc-number" maxlength="19" required>
+                <span class="field-error" id="error-number" hidden></span>
+              </label>
+              <div class="field-row field-row--short">
+                <label class="field">
+                  <span class="field-label">Expiry</span>
+                  <input type="text" id="card-expiry" name="cardExpiry" value="12/29" inputmode="numeric" autocomplete="cc-exp" maxlength="5" placeholder="MM/YY" required>
+                  <span class="field-error" id="error-expiry" hidden></span>
+                </label>
+                <label class="field">
+                  <span class="field-label">CVC</span>
+                  <input type="text" id="card-cvc" name="cardCvc" value="123" inputmode="numeric" autocomplete="cc-csc" maxlength="4" required>
+                  <span class="field-error" id="error-cvc" hidden></span>
+                </label>
+              </div>
+              <p class="demo-note">
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 10v6M12 7h.01" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+                Demo card 4242 4242 4242 4242. No card is charged and no data leaves this page.
+              </p>
+            </fieldset>
+
+            <p class="form-alert" id="booking-error" role="alert" hidden></p>
+            <button type="submit" class="button button--primary button--full" id="pay-button">Pay $0 and confirm</button>
+            <p class="secure-line">
+              <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none"><rect x="4.5" y="10" width="15" height="10" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10" stroke="currentColor" stroke-width="1.7"/></svg>
+              Simulated payment. Production checkout uses a hosted card field.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="modal" id="confirmation-modal" hidden>
+    <div class="modal-scrim" data-close-confirmation></div>
+    <section class="confirmation-card" role="dialog" aria-modal="true" aria-labelledby="confirmation-title">
+      <span class="confirmation-mark" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.2 4.2L19 7" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <h2 id="confirmation-title">You are going to <span id="confirmation-city">Lisbon</span>.</h2>
+      <p class="confirmation-lede">A sample itinerary was sent to <span id="confirmation-email">your email</span>. Keep the reference below.</p>
+      <p class="confirmation-ref" id="confirmation-ref">MRD-000000</p>
+      <dl class="confirmation-facts" id="confirmation-facts"></dl>
+      <div class="confirmation-actions">
+        <button type="button" class="button button--primary" id="add-calendar">Add to calendar</button>
+        <button type="button" class="button button--ghost" data-close-confirmation>Done</button>
+      </div>
+      <p class="confirmation-note">Prototype confirmation only. No supplier reservation or charge was made.</p>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
