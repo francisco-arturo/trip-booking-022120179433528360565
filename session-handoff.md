@@ -2,7 +2,7 @@
 
 ## Last Updated
 
-- 2026-11-10 — Meridian travel booking prototype built and verified locally.
+- 2026-11-10 — Meridian travel booking prototype built, pushed, deployed and verified; proposal drafted.
 
 ## Current Objective
 
@@ -10,10 +10,9 @@ International travel booking platform: destination discovery, flight and stay se
 
 ## Recommended Next Step
 
-1. User reviews `http://127.0.0.1:48765` using the path in `DEMO.md`.
-2. If approved, create the GitHub repository `trip-booking-022120179433528360565` and share its URL.
-3. Push, add the remote to `github.json` → `approved_remotes`, deploy with `node .harness/deploy.mjs trip-booking-022120179433528360565`, then send the live URL.
-4. Only write a proposal when the user asks for one.
+1. Send the drafted proposal with https://trip-booking-022120179433528360565.vercel.app.
+2. If the client replies, scope the production integrations and the first milestone.
+3. Keep the live alias current after any review changes; redeploy with `node .harness/deploy.mjs trip-booking-022120179433528360565` from the workspace root.
 
 ## Files
 
@@ -29,8 +28,7 @@ International travel booking platform: destination discovery, flight and stay se
 
 ## Blockers
 
-- None for the local build.
-- Live deployment is waiting on user approval and a repository URL.
+- None. The build is pushed and live.
 - No real supplier, payment provider or live assistant is connected; all inventory and replies are seeded.
 
 ## Next Session
@@ -38,4 +36,5 @@ International travel booking platform: destination discovery, flight and stay se
 - If the baseline gate is red on arrival, fix that before adding scope.
 - Do not create a second directory for this prototype; continue in this one.
 - Re-run `powershell -ExecutionPolicy Bypass -File .\init.ps1`, then `node ..\.harness\gate.mjs`.
+- The repository is `https://github.com/francisco-arturo/trip-booking-022120179433528360565` and the live alias is `https://trip-booking-022120179433528360565.vercel.app`.
 - Retirement, if ever needed, goes through the workspace `retire-prototype.ps1`.

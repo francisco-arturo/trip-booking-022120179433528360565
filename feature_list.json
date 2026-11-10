@@ -15,7 +15,7 @@
       "description": "Photo-led responsive landing page with six destinations, a combined stay and flight search dock, seeded results, a review-and-pay booking sheet with local card validation, a confirmed booking reference with calendar download, and a fast-reply travel assistant.",
       "status": "done",
       "dependencies": [],
-      "evidence": "node verify.mjs -> 16 passed, 0 failed; prototype harness 100/100; node ..\\.harness\\gate.mjs -> exit 0; local entry http://127.0.0.1:48765 -> HTTP 200 (23,015 bytes). Headless Chrome and Edge were blocked by the sandbox (crashpad OpenProcess denied), so visual QA was abandoned as optional per the workshop rules.",
+      "evidence": "node verify.mjs -> 16 passed, 0 failed; prototype harness 100/100; node ..\\.harness\\gate.mjs -> exit 0; deployed READY as dpl_4L6C8YtyTNLXNZsNcEBEMK9d3uWr; live https://trip-booking-022120179433528360565.vercel.app -> HTTP 200 (23,041 bytes) with the Meridian title; repository pushed to francisco-arturo/trip-booking-022120179433528360565. Headless Chrome and Edge were blocked by the sandbox (crashpad OpenProcess denied), so visual QA was abandoned as optional per the workshop rules.",
       "done_criteria": [
         "Behavior implemented end to end on seeded data",
         "Verification entrypoint run and its output recorded in progress.md",

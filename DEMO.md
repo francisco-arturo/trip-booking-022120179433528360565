@@ -1,15 +1,17 @@
 # Demo - Meridian travel booking prototype
 
-- **Live URL:** pending; deployment waits for approval and a GitHub repository URL.
+- **Live URL:** https://trip-booking-022120179433528360565.vercel.app
 - **Local:** `node dev-server.mjs` then open `http://127.0.0.1:48765` (set `PORT` if the port is held)
 - **Deploy:** `node .harness/deploy.mjs trip-booking-022120179433528360565` from the workspace root
 - **Last verified:** 2026-11-10
 
 ## The 60-second path
 
+Open the live URL, then:
+
 | # | Do this | The visitor should see |
 |---|---|---|
-| 1 | Open the local link | A photo-led landing page with the search dock and six seeded destinations |
+| 1 | Open the live link | A photo-led landing page with the search dock and six seeded destinations |
 | 2 | Keep Lisbon and the prefilled dates, press Search stays | Three Lisbon stays with sample nightly rates |
 | 3 | Press Reserve on Casa do Mar | A booking sheet with the stay summary, lead traveler and a prefilled demo card |
 | 4 | Press Pay and confirm | A confirmed booking reference, trip facts and a working calendar download |
@@ -33,8 +35,8 @@ The Flights tab uses the same flow with seeded fares. The assistant also answers
 ## If something fails while they look
 
 - Reload the page and repeat the 60-second path; all state resets to the seeded demo.
-- The local server is only for review. A deployment is static, so no server process is needed on Vercel.
-- Redeploy after approval: `node .harness/deploy.mjs trip-booking-022120179433528360565`.
+- The local server is only for review. The deployment is static, so no server process is needed on Vercel.
+- Redeploy: `node .harness/deploy.mjs trip-booking-022120179433528360565` — a new deployment replaces the live one.
 
 ## Not built (next, if the user wants it)
 
